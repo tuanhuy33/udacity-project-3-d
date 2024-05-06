@@ -15,4 +15,6 @@ jobs:
 
     - name: Build Docker images
       run: docker-compose -f docker-compose-build.yaml build
+      
+     - name: Docker up
       run: docker-compose up
