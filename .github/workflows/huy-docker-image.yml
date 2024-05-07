@@ -12,15 +12,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Publish to Docker Hub
-      uses: docker/build-push-action@v1
-      with:
-        username: ${{secrets.DOCKER_U}}
-        password: ${{secrets.DOCKER_P}} 
-        tags: latest, ${{github.run_number}}
-
     - name: Build Docker images
       run: |
+              docker login -u huybt2 --password ${{secrets.GH_PAT}} ghcr.io
               docker-compose -f docker-compose-build.yaml build
               docker tag udagram-frontend:local huybt2/udagram-frontend:v1
               docker tag udagram-api-feed huybt2/udagram-api-feed:v1
