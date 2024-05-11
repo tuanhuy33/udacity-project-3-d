@@ -16,11 +16,11 @@ jobs:
       run: |
               docker login -u huybt2 -p ${{secrets.GH_PAT}}
               docker-compose -f docker-compose-build.yaml build
-              docker tag udagram-frontend:local huybt2/udagram-frontend:latest
+              docker tag udagram-frontend:local huybt2/udagram-frontend:v2
               docker tag udagram-api-feed huybt2/udagram-api-feed:latest
               docker tag udagram-api-user huybt2/udagram-api-user:latest
               docker tag reverseproxy huybt2/reverseproxy:latest
-              docker push huybt2/udagram-frontend:latest
+              docker push huybt2/udagram-frontend:v2
               docker push huybt2/udagram-api-feed:latest
               docker push huybt2/udagram-api-user:latest
               docker push huybt2/reverseproxy:latest
