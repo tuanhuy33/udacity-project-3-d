@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
        - name: reverseproxy 
-         image: huybt2/reverseproxy:v7
+         image: huybt2/reverseproxy:v8
          imagePullPolicy: Always
          ports:
            - containerPort: 8080
