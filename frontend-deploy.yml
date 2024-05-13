@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: fontdend 
-        image: huybt2/udagram-frontend:v8
+        image: huybt2/udagram-frontend:v9
         imagePullPolicy: Always
         ports:
           - containerPort: 80
