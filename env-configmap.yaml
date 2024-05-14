@@ -5,7 +5,7 @@ metadata:
 data:
   POSTGRES_HOST: "udacity-instance.ch6aqzxndogx.us-east-1.rds.amazonaws.com"
   POSTGRES_DB: "postgres"
-  AWS_BUCKET: "arn:aws:s3:::mybucket1200798"
+  AWS_BUCKET: "udacity-instance"
   AWS_REGION: "us-east-1"
   AWS_PROFILE: "default"
   JWT_SECRET: "testing"
