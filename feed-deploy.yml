@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend-feed
-          image: huybt2/udagram-api-feed:v11
+          image: huybt2/udagram-api-feed:latest
           ports:
             - containerPort: 8080
           env:
