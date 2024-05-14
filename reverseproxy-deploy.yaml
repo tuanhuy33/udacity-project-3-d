@@ -15,7 +15,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-        - image:  huybt2/reverseproxy:v9
+        - image:  huybt2/reverseproxy:v11
           name: reverseproxy
           imagePullPolicy: Always
           ports:
