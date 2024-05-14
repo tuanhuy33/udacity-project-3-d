@@ -1,0 +1,670 @@
+Run docker login -u huybt2 -p ***
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /home/runner/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+Building reverseproxy
+#0 building with "default" instance using docker driver
+
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 92B done
+#2 DONE 0.0s
+
+#3 [auth] library/nginx:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/nginx:alpine
+#4 DONE 0.4s
+
+#5 [internal] load build context
+#5 transferring context: 1.37kB done
+#5 DONE 0.0s
+
+#6 [1/2] FROM docker.io/library/nginx:alpine@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00
+#6 resolve docker.io/library/nginx:alpine@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00 done
+#6 extracting sha256:fc21a1d387f514f53589abea6d67cd6b329dfd3c9059bc96a552af3b3c97b413
+#6 sha256:721fa00bc549df26b3e67cc558ff176112d4ba69847537766f3c28e171d180e7 2.50kB / 2.50kB done
+#6 sha256:501d84f5d06487ff81e506134dc922ed4fd2080d5521eb5b6ee4054fa17d15c4 10.80kB / 10.80kB done
+#6 sha256:d4bca490e609acaaf54ca73363442d31a31fd136a47a20a12370cf2025f0a10b 393B / 393B 0.1s done
+#6 sha256:5406ed7b06d9a94b5bd15843d2a1c7e38796a3ec5dc7f40f16f70cc1d045f453 1.21kB / 1.21kB 0.1s done
+#6 sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00 9.07kB / 9.07kB done
+#6 sha256:e6ef242c157026935bf8a69e6cf19f8f6635e44507c813daf0cc644f2e22396b 629B / 629B 0.1s done
+#6 sha256:13fcfbc94648785b918ecc1af675ac5187cdfc30f4fdaf9afa8bd2e9dedf548b 954B / 954B 0.1s done
+#6 sha256:8a3742a9529dc5c00974dfcf5e465be9f1606ff8a1911527b3928cf86ad57465 1.40kB / 1.40kB 0.1s done
+#6 sha256:fc21a1d387f514f53589abea6d67cd6b329dfd3c9059bc96a552af3b3c97b413 3.99MB / 3.99MB 0.1s done
+#6 sha256:0d0c16747d2c6b6c26c064652afcb964c15f1b1e596ec052b2aa19b83948ae27 5.92MB / 13.04MB 0.2s
+#6 extracting sha256:fc21a1d387f514f53589abea6d67cd6b329dfd3c9059bc96a552af3b3c97b413 0.2s done
+#6 sha256:0d0c16747d2c6b6c26c064652afcb964c15f1b1e596ec052b2aa19b83948ae27 13.04MB / 13.04MB 0.3s done
+#6 extracting sha256:e6ef242c157026935bf8a69e6cf19f8f6635e44507c813daf0cc644f2e22396b
+#6 extracting sha256:e6ef242c157026935bf8a69e6cf19f8f6635e44507c813daf0cc644f2e22396b done
+#6 extracting sha256:13fcfbc94648785b918ecc1af675ac5187cdfc30f4fdaf9afa8bd2e9dedf548b done
+#6 extracting sha256:d4bca490e609acaaf54ca73363442d31a31fd136a47a20a12370cf2025f0a10b done
+#6 extracting sha256:5406ed7b06d9a94b5bd15843d2a1c7e38796a3ec5dc7f40f16f70cc1d045f453 done
+#6 extracting sha256:8a3742a9529dc5c00974dfcf5e465be9f1606ff8a1911527b3928cf86ad57465 done
+#6 extracting sha256:0d0c16747d2c6b6c26c064652afcb964c15f1b1e596ec052b2aa19b83948ae27 0.1s
+#6 extracting sha256:0d0c16747d2c6b6c26c064652afcb964c15f1b1e596ec052b2aa19b83948ae27 0.3s done
+#6 DONE 1.0s
+
+#7 [2/2] COPY nginx.conf /etc/nginx/nginx.conf
+#7 DONE 0.0s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.9s done
+#8 writing image sha256:a29c84538f44ad00448b9e56e1177951dd5c9ea3d6902686b977e3e52c7be988 done
+#8 naming to docker.io/library/reverseproxy done
+#8 DONE 0.9s
+Building backend_user
+#0 building with "default" instance using docker driver
+
+#1 [internal] load .dockerignore
+#1 transferring context: 52B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 336B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:16
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/node:16
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 6.16MB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/5] WORKDIR /usr/src/app
+#6 DONE 0.2s
+
+#7 [3/5] COPY package*.json ./
+#7 DONE 0.0s
+
+#8 [4/5] RUN npm ci
+#8 10.23 npm WARN deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+#8 10.42 npm WARN deprecated uuid@3.3.2: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+#8 10.92 npm WARN deprecated formidable@1.2.2: Please upgrade to latest, formidable@v2 or formidable@v3! Check these notes: https://bit.ly/2ZEqIau
+#8 11.39 npm WARN deprecated mkdirp@0.5.4: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+#8 11.45 npm WARN deprecated debug@3.2.6: Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you upgrade to 3.2.7 or 4.3.1. (https://github.com/visionmedia/debug/issues/797)
+#8 11.48 npm WARN deprecated superagent@3.8.3: Please upgrade to v9.0.0+ as we have fixed a public vulnerability with formidable dependency. Note that v9.0.0+ requires Node.js v14.18.0+. See https://github.com/ladjs/superagent/pull/1800 for insight. This project is supported and maintained by the team at Forward Email @ https://forwardemail.net
+#8 11.48 npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+#8 12.10 npm WARN deprecated sequelize@5.22.4: Please update to v6 or higher! A migration guide can be found here: https://sequelize.org/v6/manual/upgrade-to-v6.html
+#8 14.55 
+#8 14.55 added 459 packages, and audited 460 packages in 7s
+#8 14.55 
+#8 14.55 49 packages are looking for funding
+#8 14.55   run `npm fund` for details
+#8 14.60 
+#8 14.60 25 vulnerabilities (1 low, 8 moderate, 11 high, 5 critical)
+#8 14.60 
+#8 14.60 To address issues that do not require attention, run:
+#8 14.60   npm audit fix
+#8 14.60 
+#8 14.60 To address all issues (including breaking changes), run:
+#8 14.60   npm audit fix --force
+#8 14.60 
+#8 14.60 Run `npm audit` for details.
+#8 14.60 npm notice 
+#8 14.60 npm notice New major version of npm available! 8.19.4 -> 10.7.0
+#8 14.60 npm notice Changelog: <https://github.com/npm/cli/releases/tag/v10.7.0>
+#8 14.60 npm notice Run `npm install -g npm@10.7.0` to update!
+#8 14.60 npm notice 
+#8 DONE 15.1s
+
+#9 [5/5] COPY . .
+#9 DONE 0.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 12.0s done
+#10 writing image sha256:092f1eefd254f714e39bec1bb686c004838c667a362bc8a34359342695651bc4 done
+#10 naming to docker.io/library/udagram-api-user done
+#10 DONE 12.0s
+Building backend_feed
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 336B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 52B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:16
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/node:16
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 6.15MB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/5] WORKDIR /usr/src/app
+#6 CACHED
+
+#7 [3/5] COPY package*.json ./
+#7 CACHED
+
+#8 [4/5] RUN npm ci
+#8 CACHED
+
+#9 [5/5] COPY . .
+#9 DONE 0.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 1.9s done
+#10 writing image sha256:718ae4fa6a1864ff2be42b60d1b1ac0bebf23ddb1f52c089ba44c79e23074146 done
+#10 naming to docker.io/library/udagram-api-feed done
+#10 DONE 1.9s
+Building frontend
+#0 building with "default" instance using docker driver
+
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 827B done
+#2 DONE 0.0s
+
+#3 [auth] docker/dockerfile:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 resolve image config for docker.io/docker/dockerfile:1
+#4 DONE 0.4s
+
+#5 docker-image://docker.io/docker/dockerfile:1@sha256:a57df69d0ea827fb7266491f2813635de6f17269be881f696fbfdf2d83dda33e
+#5 resolve docker.io/docker/dockerfile:1@sha256:a57df69d0ea827fb7266491f2813635de6f17269be881f696fbfdf2d83dda33e 0.0s done
+#5 sha256:b5f3b260a9678e1d83d2fce86eeddf79420b79147eaba2a25986f47133d73720 482B / 482B done
+#5 sha256:68ebc061390d9a7d6e194f9d58309c754a53cb8b4e3b0d89593920f42f4a9da4 1.26kB / 1.26kB done
+#5 sha256:96918c57e42509b97f10c074d80672ecdbd3bb7dcd38c1bd95960cf291207416 6.29MB / 11.98MB 0.1s
+#5 sha256:a57df69d0ea827fb7266491f2813635de6f17269be881f696fbfdf2d83dda33e 8.40kB / 8.40kB done
+#5 sha256:96918c57e42509b97f10c074d80672ecdbd3bb7dcd38c1bd95960cf291207416 11.98MB / 11.98MB 0.2s done
+#5 extracting sha256:96918c57e42509b97f10c074d80672ecdbd3bb7dcd38c1bd95960cf291207416 0.1s
+#5 extracting sha256:96918c57e42509b97f10c074d80672ecdbd3bb7dcd38c1bd95960cf291207416 0.1s done
+#5 DONE 0.3s
+
+#6 [internal] load metadata for docker.io/beevelop/ionic:v2021.06.1
+#6 ...
+
+#7 [auth] beevelop/ionic:pull token for registry-1.docker.io
+#7 DONE 0.0s
+
+#8 [internal] load metadata for docker.io/library/nginx:alpine
+#8 DONE 0.1s
+
+#6 [internal] load metadata for docker.io/beevelop/ionic:v2021.06.1
+#6 DONE 0.3s
+
+#9 [stage-2 1/2] FROM docker.io/library/nginx:alpine@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00
+#9 CACHED
+
+#10 [internal] load build context
+#10 transferring context: 1.24MB 0.0s done
+#10 DONE 0.0s
+
+#11 [ionic 1/6] FROM docker.io/beevelop/ionic:v2021.06.1@sha256:c43687a2f695a2e41b6210603e9c532c43a9f64d5b9fe86de9e0d21091d654d4
+#11 resolve docker.io/beevelop/ionic:v2021.06.1@sha256:c43687a2f695a2e41b6210603e9c532c43a9f64d5b9fe86de9e0d21091d654d4 done
+#11 sha256:f611acd52c6cad803b06b5ba932e4aabd0f2d0d5a4d050c81de2832fcb781274 0B / 162B 0.1s
+#11 sha256:749060b48224b92e179d60e23db51a0f4e2fec43088ac66626239bcd1c033f8c 12.54kB / 12.54kB done
+#11 sha256:db98fc6f11f08950985a203e07755c3262c680d00084f601e7304b768c83b3b1 0B / 843B 0.1s
+#11 sha256:c43687a2f695a2e41b6210603e9c532c43a9f64d5b9fe86de9e0d21091d654d4 2.86kB / 2.86kB done
+#11 sha256:83ee3a23efb7c75849515a6d46551c608b255d8402a4d3753752b88e0dc188fa 3.15MB / 28.57MB 0.1s
+#11 sha256:f611acd52c6cad803b06b5ba932e4aabd0f2d0d5a4d050c81de2832fcb781274 162B / 162B 0.1s done
+#11 sha256:db98fc6f11f08950985a203e07755c3262c680d00084f601e7304b768c83b3b1 843B / 843B 0.1s done
+#11 sha256:83ee3a23efb7c75849515a6d46551c608b255d8402a4d3753752b88e0dc188fa 26.21MB / 28.57MB 0.3s
+#11 sha256:17d86483442d30ab3177862f21dbd8fe86ada983d4d976d94c5bb0318c889bb2 8.44MB / 8.44MB 0.3s done
+#11 sha256:9bd0d448ad3df65edb235d863b8f85d4efe674adbe6bdc4db7aaea515a873fc0 9.44MB / 68.13MB 0.3s
+#11 sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 0B / 119.87MB 0.3s
+#11 sha256:83ee3a23efb7c75849515a6d46551c608b255d8402a4d3753752b88e0dc188fa 28.57MB / 28.57MB 0.3s done
+#11 sha256:9bd0d448ad3df65edb235d863b8f85d4efe674adbe6bdc4db7aaea515a873fc0 18.87MB / 68.13MB 0.4s
+#11 extracting sha256:83ee3a23efb7c75849515a6d46551c608b255d8402a4d3753752b88e0dc188fa 0.1s
+#11 sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9 1.05MB / 79.64MB 0.4s
+#11 sha256:9bd0d448ad3df65edb235d863b8f85d4efe674adbe6bdc4db7aaea515a873fc0 38.80MB / 68.13MB 0.6s
+#11 sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 24.12MB / 119.87MB 0.6s
+#11 sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9 19.92MB / 79.64MB 0.6s
+#11 sha256:9bd0d448ad3df65edb235d863b8f85d4efe674adbe6bdc4db7aaea515a873fc0 50.33MB / 68.13MB 0.7s
+#11 sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 31.46MB / 119.87MB 0.7s
+#11 sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9 29.16MB / 79.64MB 0.7s
+#11 sha256:9bd0d448ad3df65edb235d863b8f85d4efe674adbe6bdc4db7aaea515a873fc0 59.77MB / 68.13MB 0.8s
+#11 sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 41.40MB / 119.87MB 0.8s
+#11 sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9 37.75MB / 79.64MB 0.8s
+#11 sha256:9bd0d448ad3df65edb235d863b8f85d4efe674adbe6bdc4db7aaea515a873fc0 68.13MB / 68.13MB 0.9s
+#11 sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 51.38MB / 119.87MB 0.9s
+#11 sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9 47.19MB / 79.64MB 0.9s
+#11 sha256:9bd0d448ad3df65edb235d863b8f85d4efe674adbe6bdc4db7aaea515a873fc0 68.13MB / 68.13MB 1.0s done
+#11 sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 61.87MB / 119.87MB 1.0s
+#11 sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9 55.57MB / 79.64MB 1.0s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 0B / 1.52GB 1.0s
+#11 sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 72.35MB / 119.87MB 1.1s
+#11 sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9 65.01MB / 79.64MB 1.1s
+#11 sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 82.84MB / 119.87MB 1.2s
+#11 sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9 69.21MB / 79.64MB 1.2s
+#11 sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 93.32MB / 119.87MB 1.3s
+#11 sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9 79.64MB / 79.64MB 1.3s
+#11 sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 114.29MB / 119.87MB 1.5s
+#11 sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9 79.64MB / 79.64MB 1.4s done
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 6.29MB / 1.25GB 1.5s
+#11 sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 119.87MB / 119.87MB 1.7s done
+#11 extracting sha256:83ee3a23efb7c75849515a6d46551c608b255d8402a4d3753752b88e0dc188fa 1.4s done
+#11 sha256:e10312542e3ea02bd545efe4f747db2aa128612fbc80fa49a69d9729f484a03c 0B / 48.52MB 1.7s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 82.84MB / 1.52GB 1.8s
+#11 sha256:e10312542e3ea02bd545efe4f747db2aa128612fbc80fa49a69d9729f484a03c 5.24MB / 48.52MB 1.8s
+#11 extracting sha256:db98fc6f11f08950985a203e07755c3262c680d00084f601e7304b768c83b3b1 done
+#11 extracting sha256:f611acd52c6cad803b06b5ba932e4aabd0f2d0d5a4d050c81de2832fcb781274
+#11 sha256:e10312542e3ea02bd545efe4f747db2aa128612fbc80fa49a69d9729f484a03c 15.81MB / 48.52MB 2.0s
+#11 extracting sha256:f611acd52c6cad803b06b5ba932e4aabd0f2d0d5a4d050c81de2832fcb781274 done
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 75.50MB / 1.25GB 2.2s
+#11 sha256:e10312542e3ea02bd545efe4f747db2aa128612fbc80fa49a69d9729f484a03c 30.41MB / 48.52MB 2.2s
+#11 sha256:e10312542e3ea02bd545efe4f747db2aa128612fbc80fa49a69d9729f484a03c 35.65MB / 48.52MB 2.3s
+#11 sha256:e10312542e3ea02bd545efe4f747db2aa128612fbc80fa49a69d9729f484a03c 42.99MB / 48.52MB 2.4s
+#11 sha256:e10312542e3ea02bd545efe4f747db2aa128612fbc80fa49a69d9729f484a03c 48.52MB / 48.52MB 2.5s done
+#11 extracting sha256:17d86483442d30ab3177862f21dbd8fe86ada983d4d976d94c5bb0318c889bb2 0.1s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 0B / 444.11MB 2.5s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 168.52MB / 1.52GB 2.7s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 143.65MB / 1.25GB 2.9s
+#11 extracting sha256:17d86483442d30ab3177862f21dbd8fe86ada983d4d976d94c5bb0318c889bb2 0.3s done
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 27.26MB / 444.11MB 2.9s
+#11 extracting sha256:9bd0d448ad3df65edb235d863b8f85d4efe674adbe6bdc4db7aaea515a873fc0
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 57.67MB / 444.11MB 3.2s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 255.85MB / 1.52GB 3.6s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 218.10MB / 1.25GB 3.6s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 96.47MB / 444.11MB 3.6s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 125.83MB / 444.11MB 3.9s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 283.12MB / 1.25GB 4.2s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 152.04MB / 444.11MB 4.2s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 179.31MB / 444.11MB 4.5s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 348.13MB / 1.52GB 4.8s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 207.97MB / 444.11MB 4.8s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 356.52MB / 1.25GB 4.9s
+#11 extracting sha256:9bd0d448ad3df65edb235d863b8f85d4efe674adbe6bdc4db7aaea515a873fc0 2.0s done
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 245.37MB / 444.11MB 5.2s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 427.82MB / 1.52GB 5.6s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 427.82MB / 1.25GB 5.6s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 278.93MB / 444.11MB 5.6s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 306.18MB / 444.11MB 5.9s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 491.78MB / 1.25GB 6.2s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 332.40MB / 444.11MB 6.2s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 505.41MB / 1.52GB 6.4s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 360.71MB / 444.11MB 6.5s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 554.70MB / 1.25GB 6.8s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 385.88MB / 444.11MB 6.8s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 588.25MB / 1.52GB 7.2s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 419.43MB / 444.11MB 7.2s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 630.19MB / 1.25GB 7.5s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 444.11MB / 444.11MB 7.5s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 666.89MB / 1.52GB 8.0s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 702.55MB / 1.25GB 8.2s
+#11 sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 444.11MB / 444.11MB 8.2s done
+#11 extracting sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf
+#11 sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8 1.05MB / 75.32MB 8.3s
+#11 sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8 11.53MB / 75.32MB 8.4s
+#11 sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8 20.97MB / 75.32MB 8.5s
+#11 sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8 31.46MB / 75.32MB 8.6s
+#11 sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8 40.89MB / 75.32MB 8.7s
+#11 sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8 51.38MB / 75.32MB 8.8s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 746.59MB / 1.52GB 8.9s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 770.70MB / 1.25GB 8.9s
+#11 sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8 60.82MB / 75.32MB 8.9s
+#11 sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8 69.21MB / 75.32MB 9.0s
+#11 sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8 75.32MB / 75.32MB 9.1s
+#11 sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8 75.32MB / 75.32MB 9.1s done
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 843.06MB / 1.25GB 9.6s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 823.89MB / 1.52GB 9.8s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 907.02MB / 1.25GB 10.3s
+#11 extracting sha256:8a54d3227d164e53ae086e5186185906ef4d6fae95dbbf73acb0ccabce8c83cf 2.0s done
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 905.97MB / 1.52GB 10.7s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 978.32MB / 1.25GB 11.0s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 1.04GB / 1.25GB 11.6s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 989.86MB / 1.52GB 11.8s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 1.11GB / 1.25GB 12.4s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 1.07GB / 1.52GB 12.7s
+#11 extracting sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 1.17GB / 1.25GB 13.2s
+#11 extracting sha256:0167874f597bf6c77503cc05cc8c6a4530a594b0570516b46195f5d8a39ccbe9 0.7s done
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 1.15GB / 1.52GB 14.1s
+#11 sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 1.25GB / 1.25GB 14.2s done
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 1.24GB / 1.52GB 15.0s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 1.32GB / 1.52GB 15.9s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 1.40GB / 1.52GB 16.8s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 1.48GB / 1.52GB 17.7s
+#11 sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 1.52GB / 1.52GB 18.9s done
+#11 extracting sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c
+#11 extracting sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 5.1s
+#11 extracting sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 10.1s
+#11 extracting sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 15.3s
+#11 extracting sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 20.5s
+#11 extracting sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 26.3s
+#11 extracting sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 31.4s
+#11 extracting sha256:42bf89f553fd6c76eb261480190c1d1fd899da475bee08df761709f6e6b91f5c 34.4s done
+#11 extracting sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06
+#11 extracting sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 5.1s
+#11 extracting sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 10.1s
+#11 extracting sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 15.2s
+#11 extracting sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 20.9s
+#11 extracting sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 26.1s
+#11 extracting sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 31.2s
+#11 extracting sha256:24d39f3eaba260e25c8319d075d26f2cd75520f4c652d3c077dd55003a502c06 34.4s done
+#11 extracting sha256:e10312542e3ea02bd545efe4f747db2aa128612fbc80fa49a69d9729f484a03c
+#11 extracting sha256:e10312542e3ea02bd545efe4f747db2aa128612fbc80fa49a69d9729f484a03c 2.0s done
+#11 extracting sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f
+#11 extracting sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 5.1s
+#11 extracting sha256:c30410de46ae11f6c087f791cf893e05017f5162d77b812bd4fe8cac0e63988f 9.9s done
+#11 extracting sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8
+#11 extracting sha256:284c1f6f2f4afe49a5ddf35e38f124097f6181acefbd5d7b5e11060df7ca9bf8 4.1s done
+#11 DONE 111.8s
+
+#12 [ionic 2/6] WORKDIR /usr/src/app
+#12 DONE 0.0s
+
+#13 [ionic 3/6] COPY package*.json ./
+#13 DONE 0.0s
+
+#14 [ionic 4/6] RUN npm i -f
+#14 0.326 npm WARN using --force I sure hope you know what you are doing.
+#14 0.594 npm WARN read-shrinkwrap This version of npm is compatible with lockfileVersion@1, but package-lock.json was generated for lockfileVersion@2. I'll try to do my best with it!
+#14 22.30 
+#14 22.30 > fsevents@1.2.13 install /usr/src/app/node_modules/@angular/compiler-cli/node_modules/fsevents
+#14 22.30 > node install.js
+#14 22.30 
+#14 22.35 
+#14 22.35 Skipping 'fsevents' build as platform linux is not supported
+#14 22.35 
+#14 22.35 > fsevents@1.2.13 install /usr/src/app/node_modules/chokidar/node_modules/fsevents
+#14 22.35 > node install.js
+#14 22.35 
+#14 22.40 
+#14 22.40 Skipping 'fsevents' build as platform linux is not supported
+#14 22.49 
+#14 22.49 > fsevents@1.2.13 install /usr/src/app/node_modules/watchpack-chokidar2/node_modules/fsevents
+#14 22.49 > node install.js
+#14 22.49 
+#14 22.53 
+#14 22.53 Skipping 'fsevents' build as platform linux is not supported
+#14 22.54 
+#14 22.54 > fsevents@1.2.13 install /usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents
+#14 22.54 > node install.js
+#14 22.54 
+#14 22.58 
+#14 22.59 Skipping 'fsevents' build as platform linux is not supported
+#14 22.65 
+#14 22.65 > core-js@3.6.4 postinstall /usr/src/app/node_modules/@angular-devkit/build-angular/node_modules/core-js
+#14 22.65 > node -e "try{require('./postinstall')}catch(e){}"
+#14 22.65 
+#14 22.70 Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+#14 22.70 
+#14 22.70 The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+#14 22.70 > https://opencollective.com/core-js 
+#14 22.70 > https://www.patreon.com/zloirock 
+#14 22.70 
+#14 22.70 Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+#14 22.70 
+#14 22.73 
+#14 22.73 > core-js@2.6.12 postinstall /usr/src/app/node_modules/core-js
+#14 22.73 > node -e "try{require('./postinstall')}catch(e){}"
+#14 22.73 
+#14 22.78 Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+#14 22.78 
+#14 22.78 The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+#14 22.78 > https://opencollective.com/core-js 
+#14 22.78 > https://www.patreon.com/zloirock 
+#14 22.78 
+#14 22.78 Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+#14 22.78 
+#14 22.93 
+#14 22.93 > @angular/cli@8.3.29 postinstall /usr/src/app/node_modules/@angular/cli
+#14 22.93 > node ./bin/postinstall/script.js
+#14 22.93 
+#14 23.88 added 1532 packages from 1103 contributors and audited 1535 packages in 23.33s
+#14 24.34 
+#14 24.34 81 packages are looking for funding
+#14 24.34   run `npm fund` for details
+#14 24.34 
+#14 24.34 found 218 vulnerabilities (4 low, 87 moderate, 102 high, 25 critical)
+#14 24.34   run `npm audit fix` to fix them, or `npm audit` for details
+#14 DONE 25.0s
+
+#15 [ionic 5/6] COPY . .
+#15 DONE 0.0s
+
+#16 [ionic 6/6] RUN ionic build
+#16 0.471 > ng run app:build
+#16 9.601 
+#16 9.601 chunk {0} 0.js, 0.js.map () 15.4 kB  [rendered]
+#16 9.601 chunk {1} 1.js, 1.js.map () 15.2 kB  [rendered]
+#16 9.601 chunk {2} 2.js, 2.js.map () 16.3 kB  [rendered]
+#16 9.601 chunk {3} 3.js, 3.js.map () 21.8 kB  [rendered]
+#16 9.601 chunk {4} 4.js, 4.js.map () 18.9 kB  [rendered]
+#16 9.601 chunk {5} 5.js, 5.js.map () 32.5 kB  [rendered]
+#16 9.601 chunk {6} 6.js, 6.js.map () 32.5 kB  [rendered]
+#16 9.601 chunk {7} 7.js, 7.js.map () 70.3 kB  [rendered]
+#16 9.601 chunk {8} 8.js, 8.js.map () 69.1 kB  [rendered]
+#16 9.601 chunk {9} 9.js, 9.js.map () 5.19 kB  [rendered]
+#16 9.601 chunk {10} 10.js, 10.js.map () 5.24 kB  [rendered]
+#16 9.601 chunk {11} 11.js, 11.js.map () 11.3 kB  [rendered]
+#16 9.601 chunk {12} 12.js, 12.js.map () 11.9 kB  [rendered]
+#16 9.601 chunk {13} 13.js, 13.js.map () 4.12 kB  [rendered]
+#16 9.601 chunk {14} 14.js, 14.js.map () 4.11 kB  [rendered]
+#16 9.601 chunk {15} 15.js, 15.js.map () 24.4 kB  [rendered]
+#16 9.601 chunk {16} 16.js, 16.js.map () 24.6 kB  [rendered]
+#16 9.601 chunk {17} 17.js, 17.js.map () 13.2 kB  [rendered]
+#16 9.601 chunk {18} 18.js, 18.js.map () 12.8 kB  [rendered]
+#16 9.601 chunk {19} 19.js, 19.js.map () 9.27 kB  [rendered]
+#16 9.601 chunk {20} 20.js, 20.js.map () 9.39 kB  [rendered]
+#16 9.601 chunk {21} 21.js, 21.js.map () 5.84 kB  [rendered]
+#16 9.601 chunk {22} 22.js, 22.js.map () 5.84 kB  [rendered]
+#16 9.601 chunk {23} 23.js, 23.js.map () 16.9 kB  [rendered]
+#16 9.601 chunk {24} 24.js, 24.js.map () 73 kB  [rendered]
+#16 9.601 chunk {25} 25.js, 25.js.map () 72.6 kB  [rendered]
+#16 9.601 chunk {26} 26.js, 26.js.map () 21.2 kB  [rendered]
+#16 9.601 chunk {27} 27.js, 27.js.map () 20.3 kB  [rendered]
+#16 9.601 chunk {28} 28.js, 28.js.map () 4.1 kB  [rendered]
+#16 9.601 chunk {29} 29.js, 29.js.map () 15.1 kB  [rendered]
+#16 9.601 chunk {30} 30.js, 30.js.map () 15.1 kB  [rendered]
+#16 9.601 chunk {31} 31.js, 31.js.map () 15.9 kB  [rendered]
+#16 9.601 chunk {32} 32.js, 32.js.map () 15.7 kB  [rendered]
+#16 9.601 chunk {33} 33.js, 33.js.map () 31.1 kB  [rendered]
+#16 9.601 chunk {34} 34.js, 34.js.map () 30.9 kB  [rendered]
+#16 9.601 chunk {35} 35.js, 35.js.map () 42.8 kB  [rendered]
+#16 9.601 chunk {36} 36.js, 36.js.map () 46.4 kB  [rendered]
+#16 9.601 chunk {37} 37.js, 37.js.map () 14.2 kB  [rendered]
+#16 9.601 chunk {38} 38.js, 38.js.map () 13.9 kB  [rendered]
+#16 9.601 chunk {39} 39.js, 39.js.map () 40.4 kB  [rendered]
+#16 9.601 chunk {40} 40.js, 40.js.map () 40.5 kB  [rendered]
+#16 9.601 chunk {41} 41.js, 41.js.map () 16.8 kB  [rendered]
+#16 9.601 chunk {42} 42.js, 42.js.map () 16.8 kB  [rendered]
+#16 9.601 chunk {43} 43.js, 43.js.map () 45.2 kB  [rendered]
+#16 9.601 chunk {44} 44.js, 44.js.map () 22.2 kB  [rendered]
+#16 9.601 chunk {45} 45.js, 45.js.map () 21.5 kB  [rendered]
+#16 9.601 chunk {46} 46.js, 46.js.map () 12.9 kB  [rendered]
+#16 9.601 chunk {47} 47.js, 47.js.map () 12.9 kB  [rendered]
+#16 9.601 chunk {48} 48.js, 48.js.map () 15 kB  [rendered]
+#16 9.601 chunk {49} 49.js, 49.js.map () 15.2 kB  [rendered]
+#16 9.601 chunk {50} 50.js, 50.js.map () 23.6 kB  [rendered]
+#16 9.601 chunk {51} 51.js, 51.js.map () 25 kB  [rendered]
+#16 9.601 chunk {52} 52.js, 52.js.map () 21.2 kB  [rendered]
+#16 9.601 chunk {53} 53.js, 53.js.map () 21.2 kB  [rendered]
+#16 9.601 chunk {54} 54.js, 54.js.map () 14.8 kB  [rendered]
+#16 9.601 chunk {55} 55.js, 55.js.map () 14.8 kB  [rendered]
+#16 9.601 chunk {56} 56.js, 56.js.map () 7.88 kB  [rendered]
+#16 9.601 chunk {57} 57.js, 57.js.map () 32.8 kB  [rendered]
+#16 9.601 chunk {58} 58.js, 58.js.map () 27.9 kB  [rendered]
+#16 9.601 chunk {59} 59.js, 59.js.map () 25.4 kB  [rendered]
+#16 9.601 chunk {60} 60.js, 60.js.map () 17.2 kB  [rendered]
+#16 9.601 chunk {61} 61.js, 61.js.map () 16.8 kB  [rendered]
+#16 9.601 chunk {62} 62.js, 62.js.map () 27 kB  [rendered]
+#16 9.601 chunk {63} 63.js, 63.js.map () 27 kB  [rendered]
+#16 9.601 chunk {64} 64.js, 64.js.map () 47.2 kB  [rendered]
+#16 9.601 chunk {65} 65.js, 65.js.map () 47.2 kB  [rendered]
+#16 9.601 chunk {66} 66.js, 66.js.map () 10.9 kB  [rendered]
+#16 9.601 chunk {67} 67.js, 67.js.map () 7.74 kB  [rendered]
+#16 9.601 chunk {68} 68.js, 68.js.map () 7.74 kB  [rendered]
+#16 9.601 chunk {69} 69.js, 69.js.map () 16 kB  [rendered]
+#16 9.601 chunk {70} 70.js, 70.js.map () 16.2 kB  [rendered]
+#16 9.601 chunk {71} 71.js, 71.js.map () 2.06 kB  [rendered]
+#16 9.601 chunk {72} 72.js, 72.js.map () 13.9 kB  [rendered]
+#16 9.601 chunk {73} 73.js, 73.js.map () 13.9 kB  [rendered]
+#16 9.601 chunk {74} 74.js, 74.js.map () 20.8 kB  [rendered]
+#16 9.601 chunk {75} 75.js, 75.js.map () 21.3 kB  [rendered]
+#16 9.601 chunk {76} 76.js, 76.js.map () 12.9 kB  [rendered]
+#16 9.601 chunk {77} 77.js, 77.js.map () 12.8 kB  [rendered]
+#16 9.601 chunk {78} 78.js, 78.js.map () 23.3 kB  [rendered]
+#16 9.601 chunk {common} common.js, common.js.map (common) 14.7 kB  [rendered]
+#16 9.601 chunk {core-js-js} core-js-js.js, core-js-js.js.map (core-js-js) 78.7 kB  [rendered]
+#16 9.601 chunk {css-shim-206ea950-3169f23e-js} css-shim-206ea950-3169f23e-js.js, css-shim-206ea950-3169f23e-js.js.map (css-shim-206ea950-3169f23e-js) 21.9 kB  [rendered]
+#16 9.601 chunk {dom-96781eef-a2fb04dd-js} dom-96781eef-a2fb04dd-js.js, dom-96781eef-a2fb04dd-js.js.map (dom-96781eef-a2fb04dd-js) 27.7 kB  [rendered]
+#16 9.601 chunk {dom-js} dom-js.js, dom-js.js.map (dom-js) 20.2 kB  [rendered]
+#16 9.601 chunk {focus-visible-70713a0c-js} focus-visible-70713a0c-js.js, focus-visible-70713a0c-js.js.map (focus-visible-70713a0c-js) 2.19 kB  [rendered]
+#16 9.601 chunk {hardware-back-button-5afe3cb0-js} hardware-back-button-5afe3cb0-js.js, hardware-back-button-5afe3cb0-js.js.map (hardware-back-button-5afe3cb0-js) 2.87 kB  [rendered]
+#16 9.601 chunk {home-home-module} home-home-module.js, home-home-module.js.map (home-home-module) 35.5 kB  [rendered]
+#16 9.601 chunk {index-69c37885-js} index-69c37885-js.js, index-69c37885-js.js.map (index-69c37885-js) 41.9 kB  [rendered]
+#16 9.601 chunk {input-shims-a4fc53ac-js} input-shims-a4fc53ac-js.js, input-shims-a4fc53ac-js.js.map (input-shims-a4fc53ac-js) 13.5 kB  [rendered]
+#16 9.601 chunk {ios-transition-504cdd09-js} ios-transition-504cdd09-js.js, ios-transition-504cdd09-js.js.map (ios-transition-504cdd09-js) 26.6 kB  [rendered]
+#16 9.601 chunk {main} main.js, main.js.map (main) 82.4 kB [initial] [rendered]
+#16 9.601 chunk {md-transition-fea2bbfb-js} md-transition-fea2bbfb-js.js, md-transition-fea2bbfb-js.js.map (md-transition-fea2bbfb-js) 3.91 kB  [rendered]
+#16 9.601 chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 316 kB [initial] [rendered]
+#16 9.601 chunk {polyfills-es5} polyfills-es5.js, polyfills-es5.js.map (polyfills-es5) 716 kB [initial] [rendered]
+#16 9.601 chunk {runtime} runtime.js, runtime.js.map (runtime) 9.77 kB [entry] [rendered]
+#16 9.601 chunk {shadow-css-4889ae62-23996f3f-js} shadow-css-4889ae62-23996f3f-js.js, shadow-css-4889ae62-23996f3f-js.js.map (shadow-css-4889ae62-23996f3f-js) 15.7 kB  [rendered]
+#16 9.601 chunk {status-tap-32c72c43-js} status-tap-32c72c43-js.js, status-tap-32c72c43-js.js.map (status-tap-32c72c43-js) 1.83 kB  [rendered]
+#16 9.601 chunk {styles} styles.js, styles.js.map (styles) 100 kB [initial] [rendered]
+#16 9.601 chunk {swipe-back-35ad8e37-js} swipe-back-35ad8e37-js.js, swipe-back-35ad8e37-js.js.map (swipe-back-35ad8e37-js) 2.67 kB  [rendered]
+#16 9.601 chunk {swiper-bundle-8bab85e6-js} swiper-bundle-8bab85e6-js.js, swiper-bundle-8bab85e6-js.js.map (swiper-bundle-8bab85e6-js) 213 kB  [rendered]
+#16 9.601 chunk {tap-click-ca00ce7f-js} tap-click-ca00ce7f-js.js, tap-click-ca00ce7f-js.js.map (tap-click-ca00ce7f-js) 6.32 kB  [rendered]
+#16 9.601 chunk {vendor} vendor.js, vendor.js.map (vendor) 4.66 MB [initial] [rendered]
+#16 9.601 Date: 2024-05-14T09:08:48.445Z - Hash: f9ca8c241b35dd7f7937 - Time: 6683ms
+#16 DONE 10.0s
+
+#17 [stage-2 2/2] COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html
+#17 DONE 0.2s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 0.4s done
+#18 writing image sha256:cb495afd0c3954b1ae8b6168e80fea15123d1f863d03890fc220839b094c3747 done
+#18 naming to docker.io/library/udagram-frontend:local done
+#18 DONE 0.4s
+The push refers to repository [docker.io/huybt2/udagram-frontend]
+03c4b0d63257: Preparing
+ce495f7b0b7d: Preparing
+9c70f446fbe2: Preparing
+5be225e16e44: Preparing
+3d04ead9b400: Preparing
+af5598fef05f: Preparing
+8fbd5a835e5e: Preparing
+75061be64847: Preparing
+d4fc045c9e3a: Preparing
+af5598fef05f: Waiting
+8fbd5a835e5e: Waiting
+75061be64847: Waiting
+d4fc045c9e3a: Waiting
+3d04ead9b400: Layer already exists
+5be225e16e44: Layer already exists
+ce495f7b0b7d: Layer already exists
+9c70f446fbe2: Layer already exists
+af5598fef05f: Layer already exists
+8fbd5a835e5e: Layer already exists
+75061be64847: Layer already exists
+d4fc045c9e3a: Layer already exists
+03c4b0d63257: Pushed
+latest: digest: sha256:67873ed64eb0c378ea2ecbfca79b371462f96be7fd1d0bcf1302d38c6cbb5668 size: 2200
+The push refers to repository [docker.io/huybt2/udagram-api-feed]
+951a0d8f4297: Preparing
+885237fad61d: Preparing
+80f994dbb985: Preparing
+8e75603ff383: Preparing
+be322b479aee: Preparing
+d41bcd3a037b: Preparing
+fe0d845e767b: Preparing
+f25ec1d93a58: Preparing
+794ce8b1b516: Preparing
+3220beed9b06: Preparing
+684f82921421: Preparing
+9af5f53e8f62: Preparing
+fe0d845e767b: Waiting
+f25ec1d93a58: Waiting
+794ce8b1b516: Waiting
+9af5f53e8f62: Waiting
+3220beed9b06: Waiting
+684f82921421: Waiting
+d41bcd3a037b: Waiting
+be322b479aee: Layer already exists
+d41bcd3a037b: Layer already exists
+fe0d845e767b: Layer already exists
+f25ec1d93a58: Layer already exists
+794ce8b1b516: Layer already exists
+3220beed9b06: Layer already exists
+684f82921421: Layer already exists
+9af5f53e8f62: Layer already exists
+8e75603ff383: Pushed
+80f994dbb985: Pushed
+951a0d8f4297: Pushed
+885237fad61d: Pushed
+latest: digest: sha256:c50036aefc719887b6af7a8fb99d2889a79b222e4bec2fffb267a6a48c2a2af6 size: 2843
+The push refers to repository [docker.io/huybt2/udagram-api-user]
+1bf8dab6c611: Preparing
+885237fad61d: Preparing
+80f994dbb985: Preparing
+8e75603ff383: Preparing
+be322b479aee: Preparing
+d41bcd3a037b: Preparing
+fe0d845e767b: Preparing
+f25ec1d93a58: Preparing
+794ce8b1b516: Preparing
+3220beed9b06: Preparing
+684f82921421: Preparing
+9af5f53e8f62: Preparing
+f25ec1d93a58: Waiting
+794ce8b1b516: Waiting
+3220beed9b06: Waiting
+684f82921421: Waiting
+9af5f53e8f62: Waiting
+d41bcd3a037b: Waiting
+fe0d845e767b: Waiting
+be322b479aee: Layer already exists
+d41bcd3a037b: Layer already exists
+8e75603ff383: Mounted from huybt2/udagram-api-feed
+80f994dbb985: Mounted from huybt2/udagram-api-feed
+885237fad61d: Mounted from huybt2/udagram-api-feed
+fe0d845e767b: Layer already exists
+794ce8b1b516: Layer already exists
+f25ec1d93a58: Layer already exists
+3220beed9b06: Layer already exists
+684f82921421: Layer already exists
+9af5f53e8f62: Layer already exists
+1bf8dab6c611: Pushed
+latest: digest: sha256:ada7c5805f76edae42081aab99dfffd239b112710a1cd156935656f3ed11712c size: 2843
+The push refers to repository [docker.io/huybt2/reverseproxy]
+bd5df11a01aa: Preparing
+ce495f7b0b7d: Preparing
+9c70f446fbe2: Preparing
+5be225e16e44: Preparing
+3d04ead9b400: Preparing
+af5598fef05f: Preparing
+8fbd5a835e5e: Preparing
+75061be64847: Preparing
+d4fc045c9e3a: Preparing
+8fbd5a835e5e: Waiting
+75061be64847: Waiting
+d4fc045c9e3a: Waiting
+af5598fef05f: Waiting
+3d04ead9b400: Layer already exists
+ce495f7b0b7d: Layer already exists
+5be225e16e44: Layer already exists
+9c70f446fbe2: Layer already exists
+af5598fef05f: Layer already exists
+d4fc045c9e3a: Layer already exists
+8fbd5a835e5e: Layer already exists
+75061be64847: Layer already exists
+bd5df11a01aa: Pushed
+latest: digest: sha256:b1b2b0006b0a6698da8bc0aa48a35114f5f01c1b0fb657e6bfac245564ede234 size: 2196c
